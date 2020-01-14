@@ -5,7 +5,6 @@ using System.Text;
 using System.Threading.Tasks;
 
 //1. Create a new Visual C# Console App using .NET Framework project and name it "ConsoleApplication."
-// more notes to save
 
 namespace ConsoleApplication
 {
@@ -18,7 +17,7 @@ namespace ConsoleApplication
             var location = "LaJara, CO";
              
             //(My name is ... , I am from ...) using String Interpolation. ---> Console.WriteLine($"My name is : {myName}");
-            Console.WriteLine("My name is: " + myName + "I am from  location " + location);
+            Console.WriteLine($"My name is {myName} I am from {location}");
             Console.WriteLine("Please enter your name: ");
             var yourName = Console.ReadLine();
 
@@ -27,18 +26,23 @@ namespace ConsoleApplication
             Console.WriteLine("Hi " + yourName + "!");
 
             // 4. Output the current date but not the current time.
-            Console.Write("Current Date and Time is : ");
+            Console.Write("Current Date: ");
             var dateAndTime = DateTime.Now;
             var date = dateAndTime.Date;
-     
-            Console.WriteLine(dateAndTime);
+            Console.WriteLine(dateAndTime.ToString("d"));
 
+            var christmas = new DateTime(date.Year, 12, 25);
+
+            if (date.Month == 12 && date.Day >= 26)
+            {
+               christmas = new DateTime((date.Year + 1), 12, 25);
+            }
+         
             // 5. Output the number of days until Christmas this year and, of course, apply an appropriate label to that output.
             Console.Write("Days Until Christmas: ");
-            var christmas = new DateTime(date.Year, 12, 25);
+           
             var daysBetween = christmas - date;
-
-            Console.WriteLine(daysBetween);
+            Console.WriteLine((daysBetween.Days));
 
             // 6. Add the program example from section 2.1 in the C# Programming Yellow Book by Rob Miles.
             //using System;
