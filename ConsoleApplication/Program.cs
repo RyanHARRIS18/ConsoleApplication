@@ -1,27 +1,22 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 //1. Create a new Visual C# Console App using .NET Framework project and name it "ConsoleApplication."
-
 namespace ConsoleApplication
 {
-    class Program
+    internal class Program
     {
-        static void Main(string[] args)
+        private static void Main(string[] args)
         {
             // 2. Store two variables: Your name   Your location(state or country)
             var myName = "Ryan Harris";
             var location = "LaJara, CO";
-             
+
             //(My name is ... , I am from ...) using String Interpolation. ---> Console.WriteLine($"My name is : {myName}");
             Console.WriteLine($"My name is {myName} I am from {location}");
             Console.WriteLine("Please enter your name: ");
             var yourName = Console.ReadLine();
 
-            // 3. Output two WriteLine statements that display those two variables with proper labels 
+            // 3. Output two WriteLine statements that display those two variables with proper labels
             //(My name is ... , I am from ...) using String Interpolation.
             Console.WriteLine("Hi " + yourName + "!");
 
@@ -35,12 +30,12 @@ namespace ConsoleApplication
 
             if (date.Month == 12 && date.Day >= 26)
             {
-               christmas = new DateTime((date.Year + 1), 12, 25);
+                christmas = new DateTime((date.Year + 1), 12, 25);
             }
-         
+
             // 5. Output the number of days until Christmas this year and, of course, apply an appropriate label to that output.
             Console.Write("Days Until Christmas: ");
-           
+
             var daysBetween = christmas - date;
             Console.WriteLine((daysBetween.Days));
 
@@ -48,7 +43,7 @@ namespace ConsoleApplication
             //using System;
             /* 7.  Add these requirements to the code:
             - Provide appropriate text labels when requesting dimensional input.
-            - Cause the program to pause in the console so that the application does not automatically terminate when launched from the 
+            - Cause the program to pause in the console so that the application does not automatically terminate when launched from the
             Visual Studio run debugger tool. Hint: Consider Console.ReadKey()
             - You do NOT need to add any sort of input validation. */
 
@@ -72,10 +67,5 @@ namespace ConsoleApplication
         }
     }
 }
-        
+
 //8&9 Push & Sumbit
-
-
-    
- 
-
